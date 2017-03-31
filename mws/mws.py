@@ -313,7 +313,7 @@ class Feeds(MWS):
 
     def get_feed_submission_result(self, feedid):
         data = dict(Action='GetFeedSubmissionResult', FeedSubmissionId=feedid)
-        return self.make_request(data)
+        return self.make_request(data, method='POST')
 
 
 class Reports(MWS):
